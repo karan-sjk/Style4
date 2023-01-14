@@ -1,0 +1,119 @@
+<html>
+    
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        $poppins: 'Poppins', sans-serif;
+        $background: #FAFAFC;
+        $shadow: 0 4px 12px -2px rgba(#6B75A1, .16);
+        $c-darkGray: #4a4a4e;
+        $ease: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        
+        body {
+           font-family: $poppins;
+           color: $c-darkGray;
+        }
+        .flex{
+           
+            margin-top: 100px;
+        }
+        
+        .element {
+           background-image: url("https://source.unsplash.com/500x500/?pink'");
+           background-color: rgb(244, 247, 247);
+           padding-top: 10px;
+           -webkit-clip-path:
+                 polygon(
+                    10% 0, 
+                    150% 35%, 
+                    100% 65%, 
+                    0% 80%);
+         clip-path:
+                 polygon(
+                    10% 0, 
+                    150% 35%, 
+                    100% 65%, 
+                    0% 80%);
+           height: 350px;
+           width: 350px;
+           transition: $ease;
+            animation: poly 10s ease-in-out infinite;
+           &:hover {
+              // animation: unset;
+              filter: hue-rotate(50deg);
+           }
+        }
+        
+        img {
+           width: 1000px;
+        }
+        
+        @keyframes poly {
+            0% {
+                -webkit-clip-path:
+                 polygon(
+                    10% 0,  
+                    150% 35%, 
+                    100% 65%, 
+                    0% 80%);
+         clip-path:
+            polygon(
+               10% 0, 
+               150% 35%, 
+               100% 65%, 
+               0% 80%);
+            }
+            50% {
+                -webkit-clip-path:
+                 polygon(
+                    0 0, 
+                    100% 35%,
+                    100% 65%, 
+                    10% 100%);
+         clip-path:
+            polygon(
+               0 0, 
+               100% 35%, 
+               100% 105%, 
+               10% 100%);
+            }
+            100% {
+                -webkit-clip-path:
+                 polygon(
+                    10% 0, 
+                    150% 35%, 
+                    100% 65%, 
+                    0% 80%);
+         clip-path:
+                 polygon(
+                    10% 0, 
+                    150% 35%, 
+                    100% 65%, 
+                    0% 80%);
+            }
+        }
+        
+
+
+    </style>
+</head>
+    <body>
+
+
+        <div class="flex justify-center items-center vh-100">
+            <center>
+                <div class="element pv3 ph5">
+                </div>
+            </center>
+         </div>
+
+   
+
+    </body>
+</html>
